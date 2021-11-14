@@ -1,0 +1,25 @@
+
+
+    <ul><li>El valor de los items es el siguiente</li>
+    <li class="text" *ngFor="let i of items | async">
+        {{i.name}} {{i.lastName}} {{i.phone}}
+    </li>
+</ul>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+<!------------------------Area de pruebas------------------------------------->
+<p>seccion de pruebas</p>
+
+<div *ngIf="auth.user | async as user; else showLogin">
+    <h1>Hello {{ user.displayName }}!</h1>
+    <button (click)="logout()">Logout</button>
+</div>
+<ng-template #showLogin>
+    <p>Please login.</p>
+    <button (click)="login()">Login with Google</button>
+</ng-template>

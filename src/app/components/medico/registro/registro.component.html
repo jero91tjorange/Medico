@@ -1,0 +1,6 @@
+<p>Registrate</p>
+<form #registro="ngForm" (ngSubmit)="registrate(registro)">
+    <input type="email" name="email" ngModel placeholder="email" required>
+    <input type="password" name="password" ngModel placeholder="password" required>
+    <button type="submit">Registrate</button>
+</form>
