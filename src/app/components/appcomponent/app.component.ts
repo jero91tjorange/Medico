@@ -1,9 +1,13 @@
-import { collection } from 'firebase/firestore';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+
 import { Component } from '@angular/core';
 //Importacion de auth de firestore
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import firebase from 'firebase/compat/app';
+import { Medico } from 'src/app/interface/medico';
+//Colleciones y angular firestore
+import { collection } from 'firebase/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+
+//import firebase from 'firebase/compat/app';???????????????????????????
 
 @Component({
   selector: 'app-root',
@@ -13,10 +17,11 @@ import firebase from 'firebase/compat/app';
 export class AppComponent {
   
   items:any;
-  constructor(private angularfirestore:AngularFirestore, /*pruebas*/ public auth: AngularFireAuth ){
-    this.items = angularfirestore.collection('Medico').valueChanges();
+  constructor(/*private angularfirestore:AngularFirestore, public auth: AngularFireAuth*/ ){
+    //this.items = angularfirestore.collection('Medico').valueChanges();
   }
 
+  /*Metodos de google auth
   login() {
     this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
@@ -24,5 +29,8 @@ export class AppComponent {
   logout() {
     this.auth.signOut();
   }
+  */
+
+
 }
 

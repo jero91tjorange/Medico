@@ -23,7 +23,6 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 
 
-
 /**********************SECCION DE PRUEBAS*************************** */
 
 
@@ -43,7 +42,8 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     BrowserAnimationsModule,
     //Firestore inicializacion
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
